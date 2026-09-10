@@ -118,7 +118,7 @@ def main():
                 exit_animation()
             else:
                 os.system('cls' if os.name == 'nt' else 'clear')
-                print(red("Invalid input"))
+                print(red("Invalid Input"))
                 time.sleep(3)
                 os.system('cls' if os.name == 'nt' else 'clear')
 
