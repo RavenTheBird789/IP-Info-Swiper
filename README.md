@@ -21,7 +21,7 @@ Installation & Execution:
 2. Run the command "cd IP-Info-Swiper" to change into the directory of this project
 3. Run the command "pip install -r requirements.txt" once in the directory to install the required third-party python libraries
 
-* To run, simply type "python3 ip_info.py" in your terminals command line or use the alias command to create a shortcut to run the program in your terminal such as "alias ip="python3 ip_info.py""
+* To run, simply type "python3 ip_info.py" in your terminals command line or use the alias command to create a shortcut to run the program in your terminal such as "alias ipinfo="python3 ip_info.py""
 
 Additional Information:
 
