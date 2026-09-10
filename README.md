@@ -26,3 +26,4 @@ Installation & Execution:
 Additional Information:
 
 * The geolocation of the given IP address returned to the user (displayed via latitude and longitude) may not be 100% accurate
+* If the users input when prompted for an IP address is an empty string, then the ipwho.is API will return the corresponding data for the IP address of the user's device
