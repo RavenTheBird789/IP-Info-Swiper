@@ -23,6 +23,16 @@ Installation & Execution:
 
 * To run, simply type "python3 ip_info.py" in your terminals command line or use the alias command to create a shortcut to run the program in your terminal such as "alias ipinfo="python3 ip_info.py""
 
+Global Execution (Optional)
+* Alternatively, you can run the program globally by simply typing "ipinfo" from anywhere in your terminal, follow these steps (For macOS and Linux):
+  1. Make the file executable by typing "chmod +x ip_info.py" in your terminal
+  2. Copy the file to a new name using "cp ip_info.py ipinfo" then make that executable too with "chmod +x ipinfo"
+  3. Create a local bin folder if you don't already have one using "mkdir -p ~/.local/bin"
+  4. Move the file into it using "mv ipinfo ~/.local/bin/"
+  5. Make sure that folder is in your PATH by adding "export PATH="HOME/.local/bin:PATH"" to your ~/.bashrc (or ~/.zshrc if you use zsh)
+  6. Reload your terminal config using "source ~/.bashrc" (or ~/.zshrc)
+  7. Type "ipinfo" from anywhere to run the program
+
 Additional Information:
 
 * The geolocation of the given IP address returned to the user (displayed via latitude and longitude) may not be 100% accurate
