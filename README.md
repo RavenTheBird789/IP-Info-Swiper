@@ -33,6 +33,18 @@ Global Execution (Optional)
   6. Reload your terminal config using "source ~/.bashrc" (or ~/.zshrc)
   7. Type "ipinfo" from anywhere to run the program
 
+* For Windows
+  1. Make sure Python is added to your PATH (check by typing "python --version" in Command Prompt. If it shows a version number, you're set)
+  2. Create a folder to hold your global scripts, such as "C:\Scripts" (You can make this anywhere, just don't forget the path)
+  3. Copy "ip_info.py" into that folder and rename the copy "ipinfo.py"
+  4. In the same folder, create a new text file named "ipinfo.bat"
+  5. Open "ipinfo.bat" in Notepad and add this single line "@python "%~dp0ipinfo.py" %*"
+  6. Save and close the file
+  7. Add your folder to your PATH: press the Windows key, search "Environment Variables", click "Edit the system environment variables", click "Environment Variables", under "User variables" select "Path", click "Edit", click "New", then paste in your folder path (e.g. "C:\Scripts")
+  8. Click OK on all the windows to save
+  9. Close and reopen Command Prompt or Powershell
+  10. Type "ipinfo" from anywhere to run the program
+
 Additional Information:
 
 * The geolocation of the given IP address returned to the user (displayed via latitude and longitude) may not be 100% accurate
