@@ -49,4 +49,4 @@ Additional Information:
 
 * The geolocation of the given IP address returned to the user (displayed via latitude and longitude) may not be 100% accurate
 * If the users input when prompted for an IP address is an empty string, then the ipwho.is API will return the corresponding data for the IP address of the user's device
-* If you exceed the rate limit, further requests will return HTTP 429 (Too Many Requests). Access will be restored automatically after 24 hours (Read additional documentation for the ipwho.is API at https://ipwhois.io/documentation for further details)
+* If you exceed the rate limit (1,000 requests per day per client IP address), further requests will return HTTP 429 (Too Many Requests). Access will be restored automatically after 24 hours (Read additional documentation for the ipwho.is API at https://ipwhois.io/documentation for further details)
