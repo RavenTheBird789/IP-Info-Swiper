@@ -24,6 +24,7 @@ Installation & Execution:
 * To run, simply type "python3 ip_info.py" in your terminals command line or use the alias command to create a shortcut to run the program in your terminal such as "alias ipinfo="python3 ip_info.py""
 
 Global Execution (Optional)
+
 * Alternatively, you can run the program globally by simply typing "ipinfo" from anywhere in your terminal, follow these steps (For macOS and Linux):
   1. Make the file executable by typing "chmod +x ip_info.py" in your terminal
   2. Copy the file to a new name using "cp ip_info.py ipinfo" then make that executable too with "chmod +x ipinfo"
