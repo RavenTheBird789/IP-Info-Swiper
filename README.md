@@ -13,7 +13,7 @@ Recommendations:
 * Enable TOR in your terminal
 * Run proxychains4 while executing the software (This comes pre-installed with Kali-Linux)
 
-Installation & Execution:
+Installation & setup
 
 ```bash
 git clone https://github.com/RavenTheBird789/IP-Info-Swiper
