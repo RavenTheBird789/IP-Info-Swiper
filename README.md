@@ -3,7 +3,7 @@ Python script that uses the ipwho.is and google maps API's to pull information a
 
 ![Alt text](images/Screenshot_20260809_192758_Termux.jpg)
 
-Prerequisites:
+Requirements:
 
 1. Ensure the latest version of python in installed in your terminal (python 3.x)
 2. Ensure you have a virtual env for the required python library (If you don't, one can easily be created by executing the command "python3 -m venv env")
