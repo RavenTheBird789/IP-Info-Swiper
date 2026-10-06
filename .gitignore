@@ -220,3 +220,4 @@ __marimo__/
 
 # Text Files
 ip_addr_info[0-9]*.txt
+ip_addr_info*.txt
