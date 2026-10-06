@@ -132,12 +132,12 @@ def get_ip_info(ip_address):
             file_num += 1
         filename = f"ip_addr_info{file_num}.txt"
         with open(filename, "w", encoding="utf-8") as ip:
-            print(f"The following infornation was ressolved from {ip_address}\nIP Type: {ip_type}\nCountry: {country}\nCountry Code: {country_code}\nCity: {city}\nContinent: {continent}\nContinent Code: {continent_code}\nRegion: {region}\nRegion Code: {region_code}\nLatitude: {lat}\nLongitude: {lon}\nMaps: {google_maps_url}\nEU: {EU}\nPostal: {Postal}\nCalling Code: {call_code}\nCapital: {capital}\nBorders: {borders}\nFlag: {flag_data}{flag}\nASN: {ASN}\nORG: {ORG}\nISP: {ISP}\nDomain: {domain}\nID: {ID}\nDST: {DST}\nOffset: {offset}\nUTC: {UTC}", file=ip)
+            print(f"The following information was ressolved from {ip_address}\nIP Type: {ip_type}\nCountry: {country}\nCountry Code: {country_code}\nCity: {city}\nContinent: {continent}\nContinent Code: {continent_code}\nRegion: {region}\nRegion Code: {region_code}\nLatitude: {lat}\nLongitude: {lon}\nMaps: {google_maps_url}\nEU: {EU}\nPostal: {Postal}\nCalling Code: {call_code}\nCapital: {capital}\nBorders: {borders}\nFlag: {flag_data}{flag}\nASN: {ASN}\nORG: {ORG}\nISP: {ISP}\nDomain: {domain}\nID: {ID}\nDST: {DST}\nOffset: {offset}\nUTC: {UTC}", file=ip)
 
         print(f"This information has been saved as {filename}")
         time.sleep(2)
     else:
-        print(red("\n[!] Server error: Unable to fetch IP information."))
+        print(red("\n[!] Server error: Unable to fetch IP information."))    
         time.sleep(3)
 
 @trademark
