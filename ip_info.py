@@ -58,45 +58,83 @@ def get_ip_info(ip_address):
             return
 
         time.sleep(2)
+        ip_type = ip_data.get("type", "N/A")
+        country = ip_data.get("country", "N/A")
+        country_code = ip_data.get("country_code", "N/A")
+        city = ip_data.get("city", "N/A")
+        continent = ip_data.get("continent", "N/A")
+        continent_code = ip_data.get("continent_code", "N/A")
+        region = ip_data.get("region", "N/A")
+        region_code = ip_data.get("region_code", "N/A")
+
         print(f"{Wh}\n IP target       :{Gr}", ip_address)
-        print(f"{Wh} Type IP         :{Gr}", ip_data.get("type", "N/A"))
-        print(f"{Wh} Country         :{Gr}", ip_data.get("country", "N/A"))
-        print(f"{Wh} Country Code    :{Gr}", ip_data.get("country_code", "N/A"))
-        print(f"{Wh} City            :{Gr}", ip_data.get("city", "N/A"))
-        print(f"{Wh} Continent       :{Gr}", ip_data.get("continent", "N/A"))
-        print(f"{Wh} Continent Code  :{Gr}", ip_data.get("continent_code", "N/A"))
-        print(f"{Wh} Region          :{Gr}", ip_data.get("region", "N/A"))
-        print(f"{Wh} Region Code     :{Gr}", ip_data.get("region_code", "N/A"))
+        print(f"{Wh} IP Type         :{Gr}", ip_type)
+        print(f"{Wh} Country         :{Gr}", country)
+        print(f"{Wh} Country Code    :{Gr}", country_code)
+        print(f"{Wh} City            :{Gr}", city)
+        print(f"{Wh} Continent       :{Gr}", continent)
+        print(f"{Wh} Continent Code  :{Gr}", continent_code)
+        print(f"{Wh} Region          :{Gr}", region)
+        print(f"{Wh} Region Code     :{Gr}", region_code)
         print(f"{Wh} Latitude        :{Gr}", ip_data.get("latitude", "N/A"))
         print(f"{Wh} Longitude       :{Gr}", ip_data.get("longitude", "N/A"))
         
         # Keep lat/lon decimals intact for accurate mapping
         lat = ip_data.get('latitude', 0)
         lon = ip_data.get('longitude', 0)
-        print(f"{Wh} Maps            :{Gr}", f"https://www.google.com/maps/@{lat},{lon},8z")
-        
-        print(f"{Wh} EU              :{Gr}", ip_data.get("is_eu", "N/A"))
-        print(f"{Wh} Postal          :{Gr}", ip_data.get("postal", "N/A"))
-        print(f"{Wh} Calling Code    :{Gr}", ip_data.get("calling_code", "N/A"))
-        print(f"{Wh} Capital         :{Gr}", ip_data.get("capital", "N/A"))
-        print(f"{Wh} Borders         :{Gr}", ip_data.get("borders", "N/A"))
+        google_maps_url = f"https://www.google.com/maps/@{lat},{lon},8z"
+        print(f"{Wh} Maps            :{Gr}", google_maps_url)
+
+        EU = ip_data.get("is_eu", "N/A")
+        Postal = ip_data.get("postal", "N/A")
+        call_code = ip_data.get("calling_code", "N/A")
+        capital = ip_data.get("capital", "N/A")
+        borders = ip_data.get("borders", "N/A")
+
+        print(f"{Wh} EU              :{Gr}", EU)
+        print(f"{Wh} Postal          :{Gr}", Postal)
+        print(f"{Wh} Calling Code    :{Gr}", call_code)
+        print(f"{Wh} Capital         :{Gr}", capital)
+        print(f"{Wh} Borders         :{Gr}", borders)
         
         # Safe extraction for nested dictionaries
         flag_data = ip_data.get("flag", {})
-        print(f"{Wh} Country Flag    :{Gr}", flag_data.get("emoji", "N/A"))
+        flag = flag_data.get("emoji", "N/A")
+        print(f"{Wh} Country Flag    :{Gr}", flag)
         
         conn_data = ip_data.get("connection", {})
-        print(f"{Wh} ASN             :{Gr}", conn_data.get("asn", "N/A"))
-        print(f"{Wh} ORG             :{Gr}", conn_data.get("org", "N/A"))
-        print(f"{Wh} ISP             :{Gr}", conn_data.get("isp", "N/A"))
-        print(f"{Wh} Domain          :{Gr}", conn_data.get("domain", "N/A"))
+        ASN = conn_data.get("asn", "N/A")
+        ORG = conn_data.get("org", "N/A")
+        ISP = conn_data.get("isp", "N/A")
+        domain = conn_data.get("domain", "N/A")
+
+        print(f"{Wh} ASN             :{Gr}", ASN)
+        print(f"{Wh} ORG             :{Gr}", ORG)
+        print(f"{Wh} ISP             :{Gr}", ISP)
+        print(f"{Wh} Domain          :{Gr}", domain)
         
         tz_data = ip_data.get("timezone", {})
-        print(f"{Wh} ID              :{Gr}", tz_data.get("id", "N/A"))
-        print(f"{Wh} ABBR            :{Gr}", tz_data.get("abbr", "N/A"))
-        print(f"{Wh} DST             :{Gr}", tz_data.get("is_dst", "N/A"))
-        print(f"{Wh} Offset          :{Gr}", tz_data.get("offset", "N/A"))
-        print(f"{Wh} UTC             :{Gr}", tz_data.get("utc", "N/A"))
+        ID = tz_data.get("id", "N/A")
+        ABBR = tz_data.get("abbr", "N/A")
+        DST = tz_data.get("is_dst", "N/A")
+        offset = tz_data.get("offset", "N/A")
+        UTC = tz_data.get("utc", "N/A")
+
+        print(f"{Wh} ID              :{Gr}", ID)
+        print(f"{Wh} ABBR            :{Gr}", ABBR)
+        print(f"{Wh} DST             :{Gr}", DST)
+        print(f"{Wh} Offset          :{Gr}", offset)
+        print(f"{Wh} UTC             :{Gr}", UTC)
+
+        time.sleep(2)
+        file_num = 1
+        while os.path.exists(f"ip_addr_info{file_num}.txt"):
+            file_num += 1
+        filename = f"ip_addr_info{file_num}.txt"
+        with open(filename, "w", encoding="utf-8") as ip:
+            print(f"The following infornation was ressolved from {ip_address}\nIP Type: {ip_type}\nCountry: {country}\nCountry Code: {country_code}\nCity: {city}\nContinent: {continent}\nContinent Code: {continent_code}\nRegion: {region}\nRegion Code: {region_code}\nLatitude: {lat}\nLongitude: {lon}\nMaps: {google_maps_url}\nEU: {EU}\nPostal: {Postal}\nCalling Code: {call_code}\nCapital: {capital}\nBorders: {borders}\nFlag: {flag_data}{flag}\nASN: {ASN}\nORG: {ORG}\nISP: {ISP}\nDomain: {domain}\nID: {ID}\nDST: {DST}\nOffset: {offset}\nUTC: {UTC}", file=ip)
+
+        print(f"This information has been saved as {filename}")
         time.sleep(2)
     else:
         print(red("\n[!] Server error: Unable to fetch IP information."))
@@ -122,6 +160,5 @@ def main():
                 time.sleep(3)
                 os.system('cls' if os.name == 'nt' else 'clear')
 
-# Run the program
 if __name__ == "__main__":
     main()
