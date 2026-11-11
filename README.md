@@ -5,7 +5,7 @@ Python script that uses the ipwho.is and google maps API's to pull information a
 
 Requirements:
 
-* Ensure the latest version of python in installed in your terminal (python 3.x)
+* Ensure the latest version of python in installed in your terminal (python 3.9+)
 
 Recommendations:
 * Use a VPN while using this tool (Proton or Mullvad are encouraged)
